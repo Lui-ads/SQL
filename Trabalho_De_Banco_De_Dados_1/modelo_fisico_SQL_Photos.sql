@@ -128,7 +128,7 @@ INSERT INTO Style (id_photographer, id_style) VALUES
 SELECT -- Photographer and his camera
     p.id_photographer,
     p.Experiencie_time,
-    c.model,
+    m.model,
     m.brand,
     m.release_year
 FROM Photographer p
@@ -145,4 +145,3 @@ JOIN Style s ON p.id_photographer = s.id_photographer
 JOIN Photos_Style ps ON s.id_style = ps.id_style
 JOIN Work w ON p.id_photographer = w.id_photographer
 JOIN Magazine mg ON w.id_magazine = mg.id_magazine;
-
